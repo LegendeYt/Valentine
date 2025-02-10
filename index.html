@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will you be my Valentine?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Will you be my Valentine? 💖</h1>
+        <p id="quiz-info">Beantworte alle Fragen richtig, um deinen Liebesbrief zu lesen! 💌</p>
+        <div id="quiz">
+            <div class="question" id="q1">
+                <h2>Wann habe ich Geburtstag?</h2>
+                <div class="choice-container">
+                    <div class="choice left" onclick="checkAnswer(1, true)">01. Juni</div>
+                    <div class="choice right" onclick="checkAnswer(1, false)">01. Juli</div>
+                </div>
+            </div>
+            <div class="question hidden" id="q2">
+                <h2>Was ist meine Lieblingsfarbe?</h2>
+                <div class="choice-container">
+                    <div class="choice left" onclick="checkAnswer(2, false)">Rot</div>
+                    <div class="choice right" onclick="checkAnswer(2, true)">Blau</div>
+                </div>
+            </div>
+            <div class="question hidden" id="q3">
+                <h2>Welches Rathaus Level bin ich in Clash of Clans?</h2>
+                <div class="choice-container">
+                    <div class="choice left" onclick="checkAnswer(3, true)">14</div>
+                    <div class="choice right" onclick="checkAnswer(3, false)">12</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="result" class="hidden">
+            <p>🎉 Alles richtig! Klicke auf den Brief! 💌</p>
+
+             <div id="envelope-wrapper">
+                <div id="envelope" onclick="openLetter()">
+                    <div class="flap"></div>
+                </div>
+                <div id="letter">
+                    <p>Liebe war der goldne Fund,</p>
+                    <p>genau so golden, wie dein Mund.</p>
+
+                    <p>Deine weichen Lippen, dein zarter Kuss,</p>
+                    <p>meine Lippen auf deinen ist ein Muss.</p>
+
+                    <p>Lang kann ich dir nicht in die Augen schauen,</p>
+                    <p>doch wenn ich das tue, kann ich meine Augen nicht trauen.</p>
+
+                    <p>Augen schöner als die Sonne, heller als jeder Stern.</p>
+                    <p>Alles in allem ein wunderschöner Kern.</p>
+
+                    <p>So schön es auch ist, über dich zu schwärmen,</p>
+                    <p>muss es hier enden, wenn auch ungern.</p>
+
+                    <p>PS: Findest du das versteckte Wort?</p>
+                    <p>Wenn ja, führe ich mit Brief drei fort.</p>
+
+                    <p>100-50:8-0,75-29 = Verstecktes Wort</p>
+                </div>
+            </div>            
+    <script src="script.js"></script>
+</body>
+</html>
