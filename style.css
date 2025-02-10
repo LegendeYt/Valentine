@@ -65,22 +65,21 @@ h2 {
     display: none;
 }
 
-/* Brief-Animation */
 #envelope-wrapper {
     position: relative;
-    width: 200px; /* Umschlaggröße */
-    height: 150px; /* Umschlaggröße */
+    width: 200px;
+    height: 150px;
     margin: 20px auto;
 }
 
 #envelope {
-    width: 200px;  /* Umschlaggröße */
-    height: 150px; /* Umschlaggröße */
+    width: 200px;
+    height: 150px;
     background: #d6336c;
     cursor: pointer;
     position: absolute;
     transition: opacity 0.5s ease-in-out;
-    z-index: 10; /* Damit der Umschlag oben bleibt */
+    z-index: 10;
 }
 
 #envelope .flap {
@@ -94,41 +93,38 @@ h2 {
     transition: transform 0.5s ease-in-out;
 }
 
-/* Wenn der Umschlag geöffnet wird, verschwindet er */
 #envelope.open {
     opacity: 0;
-    pointer-events: none; /* Verhindert weiteres Klicken */
+    pointer-events: none;
 }
 
-/* Zettel (Brief) */
 #letter {
     position: absolute;
-    top: 10%;  /* Zettel höher positioniert */
+    top: 10%;
     left: 50%;
-    width: 600px;  /* Breite beibehalten */
-    height: 800px; /* Höhe beibehalten */
-    background: #f4e1c1;  /* Cremefarbenes Papier */
-    color: #3e2c1c;  /* Dunkelbraune Schriftfarbe */
+    width: 600px;
+    height: 800px;
+    background: #f4e1c1;
+    color: #3e2c1c;
     padding: 40px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);  /* Weicher Schatten für den Zettel */
-    transform: translate(-50%, -50%); /* Zettel bleibt mittig */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translate(-50%, -50%);
     opacity: 0;
-    z-index: 5; /* Zettel bleibt unter dem Umschlag */
-    pointer-events: none; /* Anfangs nicht anklickbar */
-    font-family: 'Dancing Script', cursive; /* Kalligrafische Schriftart */
+    z-index: 5;
+    pointer-events: none;
+    font-family: 'Dancing Script', cursive;
     font-size: 1.4em;
     line-height: 1.6;
-    border: 2px solid #9c7a47; /* Dünner brauner Rand */
-    border-radius: 10px; /* Abgerundete Ecken */
-    background-image: url('https://www.transparenttextures.com/patterns/old-wall-paper.png'); /* Papiertextur */
+    border: 2px solid #9c7a47;
+    border-radius: 10px;
+    background-image: url('https://www.transparenttextures.com/patterns/old-wall-paper.png');
     background-size: cover;
     background-position: center;
     background-repeat: repeat;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);  /* Weicher Schatten, um den Zettel hervorzuheben */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
 
-/* Ränder leicht aufhellen für den Vintage-Effekt */
 #letter::before {
     content: "";
     position: absolute;
@@ -136,15 +132,13 @@ h2 {
     left: -10px;
     right: -10px;
     bottom: -10px;
-    border: 2px solid #9c7a47; /* Dunkelbraune Umrandung */
-    border-radius: 12px;  /* Abgerundete Ecken des Rahmens */
+    border: 2px solid #9c7a47;
+    border-radius: 12px;
     z-index: -1;
 }
 
-/* Der Zettel wird sichtbar, wenn der Umschlag geöffnet wird */
 #envelope.open + #letter {
     opacity: 1;
-    pointer-events: auto; /* Zettel wird anklickbar */
-    transition: opacity 1s ease-in-out; /* Übergang, damit der Zettel schön einblendet */
+    pointer-events: auto;
+    transition: opacity 1s ease-in-out;
 }
-
